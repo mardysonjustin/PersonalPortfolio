@@ -1,14 +1,14 @@
 /* Basic Resets & Global Styles */
 :root {
-    --primary-color: #D32F2F; /* Deep Red */
-    --secondary-color: #FF5252; /* Lighter/Brighter Red for accents/hovers */
-    --background-color: #121212; /* Very Dark Grey/Almost Black */
-    --text-color: #E0E0E0; /* Light Grey */
-    --card-bg-color: #1E1E1E; /* Dark Grey for Cards */
-    --header-bg-color: #0A0A0A; /* Black for Header */
-    --footer-bg-color: #0A0A0A; /* Black for Footer */
-    --font-primary: 'Arial', sans-serif; /* Placeholder, you can change this */
-    --font-secondary: 'Georgia', serif; /* Placeholder for headings */
+    --primary-color: #D32F2F; 
+    --secondary-color: #FF5252; 
+    --background-color: #121212; 
+    --text-color: #E0E0E0; 
+    --card-bg-color: #1E1E1E; 
+    --header-bg-color: #0A0A0A;
+    --footer-bg-color: #0A0A0A; 
+    --font-primary: 'Arial', sans-serif;
+    --font-secondary: 'Georgia', serif; 
 }
 
 * {
@@ -26,7 +26,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -69,7 +69,6 @@ img {
     display: block;
 }
 
-/* Header / Hero Section */
 #hero {
     background: var(--header-bg-color);
     color: #fff;
@@ -81,7 +80,7 @@ img {
     text-align: center;
     padding: 0 20px;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Uncommon shape */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
 }
 
 #hero h1 {
@@ -115,10 +114,9 @@ img {
 /* About Section */
 #about {
     padding: 4rem 0;
-    position: relative; /* Ensure positioning context for clip-path */
-    background: var(--background-color); /* Explicitly set background for clipping */
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Slant bottom edge */
-    /* z-index: 1; */ /* Add if there are overlap issues, not usually needed here */
+    position: relative; 
+    background: var(--background-color); 
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); 
 }
 
 .about-content {
@@ -129,8 +127,8 @@ img {
 
 .about-content p {
     text-align: justify;
-    font-size: 1.1rem; /* Adjust this value as needed */
-    line-height: 1.7; /* Slightly increase line height for better readability with justify */
+    font-size: 1.1rem; 
+    line-height: 1.7; 
 }
 
 .profile-pic {
@@ -142,10 +140,9 @@ img {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Projects Section */
 #projects {
     padding: 4rem 0;
-    background-color: #1A1A1A; /* Darker background for project section contrast */
+    background-color: #1A1A1A; 
 }
 
 .project-grid {
