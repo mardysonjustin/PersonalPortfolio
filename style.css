@@ -1,0 +1,343 @@
+/* Basic Resets & Global Styles */
+:root {
+    --primary-color: #D32F2F; /* Deep Red */
+    --secondary-color: #FF5252; /* Lighter/Brighter Red for accents/hovers */
+    --background-color: #121212; /* Very Dark Grey/Almost Black */
+    --text-color: #E0E0E0; /* Light Grey */
+    --card-bg-color: #1E1E1E; /* Dark Grey for Cards */
+    --header-bg-color: #0A0A0A; /* Black for Header */
+    --footer-bg-color: #0A0A0A; /* Black for Footer */
+    --font-primary: 'Arial', sans-serif; /* Placeholder, you can change this */
+    --font-secondary: 'Georgia', serif; /* Placeholder for headings */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header / Hero Section */
+#hero {
+    background: var(--header-bg-color);
+    color: #fff;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Uncommon shape */
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* About Section */
+#about {
+    padding: 4rem 0;
+    position: relative; /* Ensure positioning context for clip-path */
+    background: var(--background-color); /* Explicitly set background for clipping */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Slant bottom edge */
+    /* z-index: 1; */ /* Add if there are overlap issues, not usually needed here */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content p {
+    text-align: justify;
+    font-size: 1.1rem; /* Adjust this value as needed */
+    line-height: 1.7; /* Slightly increase line height for better readability with justify */
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+#projects {
+    padding: 4rem 0;
+    background-color: #1A1A1A; /* Darker background for project section contrast */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 200%;
+    height: 200px; 
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem 1rem;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.project-link {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background: var(--primary-color);
+    color: #fff;
+    margin: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 0;
+}
+
+#contact p {
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    display: grid;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-family: var(--font-primary);
+    background-color: #2B2B2B;
+    color: var(--text-color);
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #888;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    justify-self: center;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+footer {
+    background: var(--footer-bg-color);
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+    #hero {
+        min-height: 60vh;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
+    }
+
+    #about {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
+        padding-bottom: 5rem; 
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    .container {
+        width: 95%;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+} 

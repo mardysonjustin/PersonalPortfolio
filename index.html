@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Uncommon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="hero">
+        <div class="container">
+            <h1>Hello, I'm Mardyson Justin</h1>
+            <p>Your student developer at your service</p>
+            <a href="#projects" class="cta-button">View My Works</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="profilepic.jpg" alt="Your Name" class="profile-pic">
+                <p>I am Mardyson Justin D. Guernaldo, a third-year Computer Science Student from Batangas State University Alangilan.
+                    I have experienced working on website and data-related projects and eager to creating more. I am looking foward to
+                    further upskill while helping your company's success story!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="kinderKare.png" alt="Project 1 Thumbnail">
+                    <h3>KinderKare</h3>
+                    <p>Simple Student Management System with login and sign up using Java and MySQL. </p>
+                    <a href="https://github.com/mardysonjustin/KinderKare" target="_blank" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="codEase.png" alt="Project 2 Thumbnail">
+                    <h3>CODEase</h3>
+                    <p>Scratch-like programming language using HTML, CSS, Javascript, React.</p>
+                    <a href="https://github.com/mardysonjustin/CODEase" target="_blank" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="placeholder-project-3.jpg" alt="Project 3 Thumbnail">
+                    <h3>Discord Bot</h3>
+                    <p>Personalized general discord bot using Python PyCord.</p>
+                    <a href="https://github.com/mardysonjustin/DiscordBot" target="_blank" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="more-projects">
+                 <a href="https://github.com/mardysonjustin?tab=repositories" target="_blank" class="cta-button">Check out my GitHub!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have a project in mind, a question, or just want to say hi? Feel free to reach out!</p>
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="[Your LinkedIn Profile URL]" target="_blank">LinkedIn</a>
+                <a href="[Your GitHub Profile URL]" target="_blank">GitHub</a>
+                <a href="[Your Twitter/Other Social Media URL]" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 mardysonjustin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
