@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation
     const navbar = document.querySelector('.navbar');
     const themeToggle = document.querySelector('.theme-toggle');
     const body = document.body;
 
-    // Smooth scrolling for navigation links
+
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navbar scroll effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.background = 'var(--background-color)';
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Theme toggle
     themeToggle.addEventListener('click', () => {
         body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
         themeToggle.innerHTML = body.dataset.theme === 'dark' ? 
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', body.dataset.theme);
     });
 
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.dataset.theme = savedTheme;
@@ -49,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             '<i class="fas fa-moon"></i>';
     }
 
-    // Typing animation
     const typingText = document.querySelector('.typing-text');
     if (typingText) {
         const text = typingText.textContent;
@@ -65,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         typeWriter();
     }
 
-    // Intersection Observer for animations
     const animatedElements = document.querySelectorAll(
         'section > .container > h2, .project-card, .about-content > *, ' +
         '#contact-form > *, .social-links > a, .skill-tag, .stat-item'
@@ -95,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(el);
     });
 
-    // Form animations
     const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
     formInputs.forEach(input => {
         input.addEventListener('focus', () => {
@@ -108,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Project card hover effects
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -119,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Stats counter animation
     const stats = document.querySelectorAll('.stat-number');
     const animateValue = (element, start, end, duration) => {
         let startTimestamp = null;
@@ -147,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     stats.forEach(stat => statsObserver.observe(stat));
 
-    // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
